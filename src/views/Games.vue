@@ -158,15 +158,10 @@
         </section>
       </div>
     </div>
-    <what-new />
   </div>
 </template>
 <script>
-import WhatNew from '@/components/WhatNew'
 export default {
-  components: {
-    WhatNew
-  }
 }
 </script>
 <style lang="stylus" scoped>
