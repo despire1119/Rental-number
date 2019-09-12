@@ -11,7 +11,7 @@ export default {
     layout
   },
   created() {
-    // gihub预览
+    // 我添加一行注释你敢放进去嘛
     if (sessionStorage.redirect) {
       const redirect = sessionStorage.redirect
       delete sessionStorage.redirect
