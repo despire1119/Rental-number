@@ -1,5 +1,5 @@
 module.exports = {
   runtimeCompiler: true,
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? '/Rental-number/' : './',
   lintOnSave: true
 }
