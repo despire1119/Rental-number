@@ -1,5 +1,5 @@
 module.exports = {
   runtimeCompiler: true,
-  publicPath: './',
+  publicPath: '../',
   lintOnSave: true
 }
