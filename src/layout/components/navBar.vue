@@ -6,20 +6,8 @@
       </a>
       <div class="navigation">
         <ul class="navig cl-effect-3">
-          <li>
-            <router-link :to="{name: 'home'}" tag="a">租号玩</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'games'}" tag="a">游戏</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'blog'}" tag="a">简介</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'features'}" tag="a">预告</router-link>
-          </li>
-          <li>
-            <router-link :to="{name: 'contact'}" tag="a">联系我们</router-link>
+          <li v-for="(item, index) in routeMap" :key="index" @click="getCurrent(item.name)">
+            <router-link :to="{name: item.name}" tag="a" :class="{active:item.ifCheck}">{{ item.label }}</router-link>
           </li>
         </ul>
       </div>
@@ -32,19 +20,28 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
-// const currentCharger = {
-//   name:
-// }
+
 export default {
   name: 'NavBar',
   computed: {
-    ...mapGetters(['currentRoute'])
+    ...mapGetters([
+      'currentRoute',
+      'routeMap'
+    ])
   },
-  created() {
-    console.log(this.$route)
+  watch: {
+    $route() {
+      this.getCurrent()
+    }
   },
   mounted() {
-    console.log(this.currentRoute)
+    this.getCurrent()
+  },
+  methods: {
+    getCurrent(name) {
+      this.$store.commit('base/CHANGE_CURRENT_ROUTE', name || this.$route.name)
+      console.log(this.routeMap)
+    }
   }
 }
 </script>
@@ -90,6 +87,11 @@ export default {
         &:focus
           color #ff7105
         &:hover::after, &:focus::after
+          opacity 1
+          transform translateY(0px)
+      .active
+        color #ff7105
+        &::after
           opacity 1
           transform translateY(0px)
   .search-bar

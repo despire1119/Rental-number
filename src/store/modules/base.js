@@ -1,10 +1,31 @@
 const state = {
-  currentRoute: '???'
+  currentRoute: '???',
+  routeMap: [
+    {
+      name: 'home',
+      label: '租号玩'
+    },
+    {
+      name: 'games',
+      label: '游戏'
+    },
+    {
+      name: 'features',
+      label: '预告'
+    },
+    {
+      name: 'contact',
+      label: '联系我们'
+    }
+  ]
 }
 
 const mutations = {
   UPDATE_ROUTE: (state, payload) => {
     state.currentRoute = payload
+  },
+  CHANGE_CURRENT_ROUTE: (state, payload) => {
+    state.routeMap = state.routeMap.map(item => item.name === payload ? { ...item, ifCheck: true } : { ...item, ifCheck: false })
   }
 }
 
