@@ -9,6 +9,7 @@
     "lint": "vue-cli-service lint --fix"
 =======
     "lint": "vue-cli-service lint --fix",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
 >>>>>>> show
   },
