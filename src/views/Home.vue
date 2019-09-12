@@ -150,20 +150,17 @@
         <div class="clearfix" />
       </div>
     </div>
-    <what-new />
   </div>
 </template>
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
-import WhatNew from '@/components/WhatNew'
 
 export default {
   name: 'Home',
   components: {
     swiper,
-    swiperSlide,
-    WhatNew
+    swiperSlide
   },
   data() {
     return {
