@@ -11,6 +11,7 @@ export default {
     layout
   },
   created() {
+    //gihub预览
     if (sessionStorage.redirect) {
       const redirect = sessionStorage.redirect
       delete sessionStorage.redirect
