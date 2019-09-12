@@ -172,7 +172,7 @@ export default {
         require('@/assets/images/banner.jpg')
       ],
       swiperOption: {
-        loog: true,
+        loop: true,
         autoplay: {
           delay: 4000,
           stopOnLastSlide: false,
