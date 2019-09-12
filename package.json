@@ -5,7 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service lint --fix && vue-cli-service serve",
     "build": "vue-cli-service lint --fix && vue-cli-service build",
+<<<<<<< HEAD
     "lint": "vue-cli-service lint --fix"
+=======
+    "lint": "vue-cli-service lint --fix",
+    "deploy": "gh-pages -d dist"
+>>>>>>> show
   },
   "dependencies": {
     "core-js": "^2.6.5",
