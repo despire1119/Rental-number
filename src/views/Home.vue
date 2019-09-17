@@ -10,22 +10,12 @@
     </swiper>
     <div class="banner-bot">
       <div class="container">
-        <h2>Hello!</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-          dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-          suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
-          vulputate velit esse molestie consequat, vel illum dolore
-        </p>
-        <p>
-          Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes
-          demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui
-          sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum
-          claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima
-        </p>
+        <h2>欢迎！</h2>
+        <p>在这里，您不用注册和练习，就可以享受各种游戏的快乐。我们为您提供多样的、可定制的游戏帐号，让您不再为等级不够、装备不好、与朋友不在同一服务器等问题而烦恼！</p>
+        <p>租用帐号的步骤非常简单，开始您的畅游之旅吧！</p>
       </div>
       <nav class="cl-effect-3">
-        <a href="#">More</a>
+        <a href="#">更多</a>
       </nav>
     </div>
     <div class="gallery">
@@ -195,6 +185,33 @@ export default {
 <style lang="stylus">
 @import '~swiper/dist/css/swiper.css'
 
+.cl-effect-3
+  a
+    position relative
+    padding 8px 0
+    font-size 14px
+    color #999
+    font-weight 700
+    &:hover
+      color #ff7105
+      outline none
+      text-decoration none
+    &::after
+      position absolute
+      opacity 0
+      left 0
+      right 0
+      bottom 0
+      height 3px
+      background #ff7105
+      content ''
+      transition opacity 0.2s, transform 0.2s
+      transform translateY(10px)
+    &:focus
+      color #ff7105
+    &:hover::after, &:focus::after
+      opacity 1
+      transform translateY(0px)
 .swiper-slide
   min-height 600px
   img
