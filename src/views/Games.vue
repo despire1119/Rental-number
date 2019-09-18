@@ -5,7 +5,22 @@
         <div class="nav">
           <div class="tit">按字母搜索</div>
           <div class="inner">
-            <span v-for="(item, index) in letters" :key="index">{{item}}</span>
+            <span
+              v-for="(item, index) in letters"
+              :key="index"
+              :class="{'active': item.ifCheck}"
+              @click="checkLetter(index)"
+            >{{ item.label }}</span>
+          </div>
+        </div>
+        <div class="nav">
+          <div class="tit">终端/类型</div>
+          <div class="inner">
+            <span>手游</span>
+            <span>端游</span>
+            <span>页游</span>
+            <span>影游</span>
+            <span>其他</span>
           </div>
         </div>
         <section class="games-contain">
@@ -76,7 +91,7 @@
           </aside>
           <div class="main">
             <div class="view view-first">
-              <img :src="require('@/assets/images/1.jpg')" />
+              <img :src="require('@/assets/images/1.jpg')">
               <div class="mask">
                 <h2>我的世界</h2>
                 <p>3.3元/小时</p>
@@ -85,7 +100,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/2.jpg')" />
+              <img :src="require('@/assets/images/2.jpg')">
               <div class="mask">
                 <h2>绝地求生</h2>
                 <p>1.3元/小时</p>
@@ -94,66 +109,66 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/3.jpg')" />
+              <img :src="require('@/assets/images/3.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/4.jpg')" />
+              <img :src="require('@/assets/images/4.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/5.jpg')" />
+              <img :src="require('@/assets/images/5.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/6.jpg')" />
+              <img :src="require('@/assets/images/6.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/2.jpg')" />
+              <img :src="require('@/assets/images/2.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/1.jpg')" />
+              <img :src="require('@/assets/images/1.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/4.jpg')" />
+              <img :src="require('@/assets/images/4.jpg')">
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
                 <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
           </div>
@@ -164,32 +179,84 @@
 </template>
 <script>
 const letterLIST = [
-  'A',
-  'B',
-  'C',
-  'D',
-  'E',
-  'F',
-  'G',
-  'H',
-  'I',
-  'J',
-  'K',
-  'L',
-  'M',
-  'N',
-  'O',
-  'P',
-  'Q',
-  'R',
-  'S',
-  'T',
-  'U',
-  'V',
-  'W',
-  'X',
-  'Y',
-  'Z'
+  {
+    label: 'A'
+  },
+  {
+    label: 'B'
+  },
+  {
+    label: 'C'
+  },
+  {
+    label: 'D'
+  },
+  {
+    label: 'E'
+  },
+  {
+    label: 'F'
+  },
+  {
+    label: 'G'
+  },
+  {
+    label: 'H'
+  },
+  {
+    label: 'I'
+  },
+  {
+    label: 'J'
+  },
+  {
+    label: 'K'
+  },
+  {
+    label: 'L'
+  },
+  {
+    label: 'M'
+  },
+  {
+    label: 'N'
+  },
+  {
+    label: 'O'
+  },
+  {
+    label: 'P'
+  },
+  {
+    label: 'Q'
+  },
+  {
+    label: 'R'
+  },
+  {
+    label: 'S'
+  },
+  {
+    label: 'T'
+  },
+  {
+    label: 'U'
+  },
+  {
+    label: 'V'
+  },
+  {
+    label: 'W'
+  },
+  {
+    label: 'X'
+  },
+  {
+    label: 'Y'
+  },
+  {
+    label: 'Z'
+  }
 ]
 export default {
   data() {
@@ -197,8 +264,13 @@ export default {
       letters: letterLIST
     }
   },
-  mounted() {
-    console.log(JSON.stringify(this.letters))
+  methods: {
+    checkLetter(i) {
+      this.letters.forEach((item, index) => {
+        item.ifCheck = i === index
+      })
+      this.letters = JSON.parse(JSON.stringify(this.letters))
+    }
   }
 }
 </script>
@@ -206,15 +278,26 @@ export default {
 .nav
   display flex
   border 1px solid #d9d9d9
-  padding 15px 10px
+  height 42px
+  align-items center
   margin-bottom 10px
   .tit
-    width 140px
+    width 120px
+    height 100%
+    text-align center
+    margin-right 20px
+    line-height 42px
+    border-right 1px solid #d9d9d9
   .inner
     flex 1
-    color #ddd
+    color #a9a9a9
     span
-      margin-right 14px
+      cursor pointer
+      padding 7px
+      &:hover
+        color #ff7105
+    .active
+      color #ff7105
 .games-contain
   display flex
   justify-content space-between

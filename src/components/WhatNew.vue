@@ -1,7 +1,7 @@
 <template>
   <div class="what-new">
     <div class="container">
-      <h3>What's new</h3>
+      <h3>热门推广</h3>
       <table>
         <tr class="blog-news">
           <td class="blog-news-grid">
