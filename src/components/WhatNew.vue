@@ -8,7 +8,7 @@
             <div class="news-container">
               <div class="news-grid-left">
                 <h4>06</h4>
-                <small>of january 2015</small>
+                <small>of january 2019</small>
               </div>
               <div class="news-grid-right">
                 <h4>Claritas est etiam processus</h4>
@@ -23,7 +23,7 @@
             <div class="news-container">
               <div class="news-grid-left">
                 <h4>28</h4>
-                <small>of january 2015</small>
+                <small>of january 2019</small>
               </div>
               <div class="news-grid-right">
                 <h4>Claritas est etiam processus</h4>
@@ -40,7 +40,7 @@
             <div class="news-container">
               <div class="news-grid-left">
                 <h4>21</h4>
-                <small>of january 2015</small>
+                <small>of january 2019</small>
               </div>
               <div class="news-grid-right">
                 <h4>Claritas est etiam processus</h4>
@@ -55,7 +55,7 @@
             <div class="news-container">
               <div class="news-grid-left">
                 <h4>05</h4>
-                <small>of january 2015</small>
+                <small>of january 2019</small>
               </div>
               <div class="news-grid-right">
                 <h4>Claritas est etiam processus</h4>
