@@ -3,11 +3,11 @@ const state = {
   routeMap: [
     {
       name: 'home',
-      label: '租号玩'
+      label: '首页'
     },
     {
       name: 'games',
-      label: '游戏'
+      label: '租号玩'
     },
     {
       name: 'features',

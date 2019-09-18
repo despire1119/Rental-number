@@ -2,19 +2,12 @@
   <div>
     <div class="games">
       <div class="container">
-        <div class="page-path">
-          <ul class="path-list">
-            <li>
-              <a href="javascript:;">Home</a>
-            </li>&nbsp;&nbsp;/&nbsp;&nbsp;
-            <li class="act">Games</li>
-          </ul>
-          <p>
-            <a href="javascript:;">Back to Home</a>
-          </p>
-          <div class="clearfix" />
+        <div class="nav">
+          <div class="tit">按字母搜索</div>
+          <div class="inner">
+            <span v-for="(item, index) in letters" :key="index">{{item}}</span>
+          </div>
         </div>
-        <h3 class="page-header">List of Games Here</h3>
         <section class="games-contain">
           <aside class="side-bar">
             <h4>New games</h4>
@@ -85,72 +78,81 @@
             <div class="view view-first">
               <img :src="require('@/assets/images/1.jpg')">
               <div class="mask">
-                <h2>Game Never</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <h2>我的世界</h2>
+                <p>3.3元/小时</p>
+                <p>押金：0元|5小时起租</p>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/2.jpg')">
               <div class="mask">
-                <h2>Online Game</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                <a href="javascript:;" class="info">Play It</a>
+                <h2>绝地求生</h2>
+                <p>1.3元/小时</p>
+                <p>押金：0元|5小时起租</p>
+                <a href="javascript:;" class="info">立即租用</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/3.jpg')">
               <div class="mask">
-                <h2>Delmen lorem</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/4.jpg')">
               <div class="mask">
-                <h2>Ipsum street</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/5.jpg')">
               <div class="mask">
-                <h2>Games online</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/6.jpg')">
-              <div class="mask">
-                <h2>Nothing but Game</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+           <div class="mask">
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/2.jpg')">
               <div class="mask">
-                <h2>Ipsum street</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/1.jpg')">
               <div class="mask">
-                <h2>Games online</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
             <div class="view view-first">
               <img :src="require('@/assets/images/4.jpg')">
               <div class="mask">
-                <h2>Nothing but Game</h2>
-                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
                 <a href="javascript:;" class="info">Play It</a>
               </div>
             </div>
@@ -161,17 +163,34 @@
   </div>
 </template>
 <script>
+const letterLIST = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 export default {
+  data() {
+    return {
+      letters: letterLIST
+    }
+  },
 }
 </script>
 <style lang="stylus" scoped>
+.nav
+  display flex
+  border 1px solid #d9d9d9
+  padding 15px 10px
+  margin-bottom 10px
+  .tit
+    width 140px
+  .inner  
+    flex 1
+    span
+      margin-right 14px
 .games-contain
   display flex
-  justify-content space-around
+  justify-content space-between
 .main
   flex 1
   display flex
-  justify-content space-around
+  justify-content space-between
   flex-wrap wrap
 .side-bar
   width 15%

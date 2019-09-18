@@ -1,9 +1,9 @@
 <template>
   <section>
     <div class="top-bar-contain">
-      <a class="logo" href="#">
+      <div class="logo" href="#">
         <img src="@/assets/images/logo.png" alt>
-      </a>
+      </div>
       <div class="navigation">
         <ul class="navig cl-effect-3">
           <li v-for="(item, index) in routeMap" :key="index" @click="getCurrent(item.name)">
