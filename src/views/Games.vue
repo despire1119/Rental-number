@@ -76,7 +76,7 @@
           </aside>
           <div class="main">
             <div class="view view-first">
-              <img :src="require('@/assets/images/1.jpg')">
+              <img :src="require('@/assets/images/1.jpg')" />
               <div class="mask">
                 <h2>我的世界</h2>
                 <p>3.3元/小时</p>
@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/2.jpg')">
+              <img :src="require('@/assets/images/2.jpg')" />
               <div class="mask">
                 <h2>绝地求生</h2>
                 <p>1.3元/小时</p>
@@ -94,7 +94,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/3.jpg')">
+              <img :src="require('@/assets/images/3.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -103,7 +103,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/4.jpg')">
+              <img :src="require('@/assets/images/4.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -112,7 +112,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/5.jpg')">
+              <img :src="require('@/assets/images/5.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -121,16 +121,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/6.jpg')">
-           <div class="mask">
-                <h2>英雄联盟</h2>
-                <p>4元/小时</p>
-                <p>押金：0元|5小时起租</p>
-                <a href="javascript:;" class="info">Play It</a>
-              </div>
-            </div>
-            <div class="view view-first">
-              <img :src="require('@/assets/images/2.jpg')">
+              <img :src="require('@/assets/images/6.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -139,7 +130,7 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/1.jpg')">
+              <img :src="require('@/assets/images/2.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -148,7 +139,16 @@
               </div>
             </div>
             <div class="view view-first">
-              <img :src="require('@/assets/images/4.jpg')">
+              <img :src="require('@/assets/images/1.jpg')" />
+              <div class="mask">
+                <h2>英雄联盟</h2>
+                <p>4元/小时</p>
+                <p>押金：0元|5小时起租</p>
+                <a href="javascript:;" class="info">Play It</a>
+              </div>
+            </div>
+            <div class="view view-first">
+              <img :src="require('@/assets/images/4.jpg')" />
               <div class="mask">
                 <h2>英雄联盟</h2>
                 <p>4元/小时</p>
@@ -163,13 +163,43 @@
   </div>
 </template>
 <script>
-const letterLIST = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+const letterLIST = [
+  'A',
+  'B',
+  'C',
+  'D',
+  'E',
+  'F',
+  'G',
+  'H',
+  'I',
+  'J',
+  'K',
+  'L',
+  'M',
+  'N',
+  'O',
+  'P',
+  'Q',
+  'R',
+  'S',
+  'T',
+  'U',
+  'V',
+  'W',
+  'X',
+  'Y',
+  'Z'
+]
 export default {
   data() {
     return {
       letters: letterLIST
     }
   },
+  mounted() {
+    console.log(JSON.stringify(this.letters))
+  }
 }
 </script>
 <style lang="stylus" scoped>
@@ -180,8 +210,9 @@ export default {
   margin-bottom 10px
   .tit
     width 140px
-  .inner  
+  .inner
     flex 1
+    color #ddd
     span
       margin-right 14px
 .games-contain
