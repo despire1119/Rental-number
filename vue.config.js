@@ -1,6 +1,6 @@
 module.exports = {
   runtimeCompiler: true,
-  // publicPath: process.env.NODE_ENV === 'production' ? '/Rental-number/' : './',
-  publicPath: '/steambuy',
+  publicPath: process.env.NODE_ENV === 'production' ? '/steambuy' : './',
+  // publicPath: '/steambuy',
   lintOnSave: true
 }
