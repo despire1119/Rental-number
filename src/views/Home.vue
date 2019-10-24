@@ -8,34 +8,10 @@
       <div slot="button-prev" class="swiper-button-prev swiper-button-white" />
       <div slot="button-next" class="swiper-button-next swiper-button-white" />
     </swiper>
-    <div class="banner-bot">
-      <div class="container">
-        <h2>欢迎！</h2>
-        <p>在这里，您不用注册和练习，就可以享受各种游戏的快乐。我们为您提供多样的、可定制的游戏帐号，让您不再为等级不够、装备不好、与朋友不在同一服务器等问题而烦恼！</p>
-        <p>租用帐号的步骤非常简单，开始您的畅游之旅吧！</p>
-      </div>
-      <nav class="cl-effect-3">
-        <a href="#">更多</a>
-      </nav>
-    </div>
     <div class="gallery">
       <div class="container">
-        <h3>Gallery</h3>
+        <h3>为你推荐</h3>
         <div class="gallery-top">
-          <ul id="filters" class="clearfix">
-            <li>
-              <span class="filter active" data-filter="app card icon logo web">1</span>
-            </li>
-            <li>
-              <span class="filter" data-filter="app">2</span>
-            </li>
-            <li>
-              <span class="filter" data-filter="card">3</span>
-            </li>
-            <li>
-              <span class="filter" data-filter="icon">4</span>
-            </li>
-          </ul>
           <div id="portfoliolist">
             <div
               class="portfolio app mix_all"
@@ -108,8 +84,32 @@
               </div>
             </div>
           </div>
+          <ul id="filters" class="clearfix">
+            <li>
+              <span class="filter active" data-filter="app card icon logo web">1</span>
+            </li>
+            <li>
+              <span class="filter" data-filter="app">2</span>
+            </li>
+            <li>
+              <span class="filter" data-filter="card">3</span>
+            </li>
+            <li>
+              <span class="filter" data-filter="icon">4</span>
+            </li>
+          </ul>
         </div>
       </div>
+    </div>
+    <div class="banner-bot">
+      <div class="container">
+        <h2>欢迎！</h2>
+        <p>在这里，您不用注册和练习，就可以享受各种游戏的快乐。我们为您提供多样的、可定制的游戏帐号，让您不再为等级不够、装备不好、与朋友不在同一服务器等问题而烦恼！</p>
+        <p>租用帐号的步骤非常简单，开始您的畅游之旅吧！</p>
+      </div>
+      <nav class="cl-effect-3">
+        <a href="#">更多</a>
+      </nav>
     </div>
     <div class="video-serch">
       <div class="container splitor">
@@ -213,7 +213,7 @@ export default {
       opacity 1
       transform translateY(0px)
 .swiper-slide
-  min-height 600px
+  height 400px
   img
     width 100%
 .progress-fill
@@ -226,22 +226,23 @@ export default {
   transform scale(0)
   transform-origin left top
 .banner-bot
+  background-color #4fbfa8
   padding 80px 0
   text-align center
   h2
     font-size 36px
     font-weight 700
-    color #000
+    color #fff
     margin 0em 0 20px 0
   a
     font-size 28px
     text-transform uppercase
     font-weight 700
-    color #000
+    color #fff
   p
     font-size 18px
     font-weight 500
-    color #000
+    color #fff
     line-height 24px
     margin 0 0 15px
     &:nth-of-type(2)
@@ -258,13 +259,13 @@ export default {
   display flex
 /* -- Gallery Part Starts Here -- */
 .gallery
-  background #4fbfa8
+  background #fff
   padding 2em 0
   text-align center
 .gallery h3
   font-size 4em
   font-weight 700
-  color #fff
+  color #333
   margin 0em 0 0.5em 0
 /* -- MIXTUP PART -- */
 /* Strip
@@ -335,7 +336,7 @@ p.m_5
   line-height 1.5em
   text-align center
 ul#filters
-  padding 0px
+  padding 0
   margin 1em 0
 /* --team-- */
 .team
@@ -401,12 +402,12 @@ ul#filters
       align-items center
       border-radius 50px
       text-decoration none
-      color #fff
+      color #606060
       cursor pointer
       font-size 1.5em
       font-weight 400
       text-transform uppercase
-      border 2px solid #fff
+      border 2px solid #606060
       -webkit-border-radius 50%
       -o-border-radius 50%
       -moz-border-radius 50%
