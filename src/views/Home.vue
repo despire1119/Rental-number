@@ -8,9 +8,71 @@
       <div slot="button-prev" class="swiper-button-prev swiper-button-white" />
       <div slot="button-next" class="swiper-button-next swiper-button-white" />
     </swiper>
+
     <div class="gallery">
       <div class="container">
-        <h3>为你推荐</h3>
+        <ul class="gallery-list">
+          <li>
+            <p class="tit">
+              <i class="cell-icon" />
+              <span>端游专区</span>
+            </p>
+            <ul class="inside-list">
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="tit">
+              <i class="cell-icon" />
+              <span>手游专区</span>
+            </p>
+            <ul class="inside-list">
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <p class="tit">
+              <i class="cell-icon" />
+              <span>STM专区</span>
+            </p>
+            <ul class="inside-list">
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+              <li class="img-container">
+                <img src="@/assets/images/pubg.png" alt>
+              </li>
+            </ul>
+          </li>
+        </ul>
         <div class="gallery-top">
           <div id="portfoliolist">
             <div
@@ -146,6 +208,79 @@
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
+const arr1 = [
+  {
+    diseaseCode: '224251002',
+    diseaseDisplaySeq: '2',
+    diseaseName: '缺铁性贫血',
+    diseaseSystemCode: '12425',
+    diseaseSystemName: '血液、淋巴疾病',
+    id: '40',
+    isSelected: true,
+    systemDisplaySeq: '13'
+  },
+  {
+    diseaseCode: '224807003',
+    diseaseDisplaySeq: '3',
+    diseaseName: '肛周脓肿',
+    diseaseSystemCode: '17026',
+    diseaseSystemName: '肛周疾病',
+    id: '41',
+    isSelected: true,
+    systemDisplaySeq: '14'
+  },
+  {
+    diseaseCode: '224807002',
+    diseaseDisplaySeq: '2',
+    diseaseName: '痔疮',
+    diseaseSystemCode: '17026',
+    diseaseSystemName: '肛周疾病',
+    id: '42',
+    isSelected: true,
+    systemDisplaySeq: '14'
+  },
+  {
+    diseaseCode: '226122014',
+    diseaseDisplaySeq: '14',
+    diseaseName: '肝血管瘤',
+    diseaseSystemCode: '12612',
+    diseaseSystemName: '良、恶性肿瘤',
+    id: '43',
+    isSelected: true,
+    systemDisplaySeq: '17'
+  }
+]
+const arr2 = [
+  {
+    code: '4242510020201',
+    diseaseCode: '224251002',
+    diseaseName: '缺铁性贫血',
+    name: '是否正在检查或住院治疗过程中？',
+    seq: '1'
+  },
+  {
+    code: '4242510020302',
+    diseaseCode: '224251002',
+    diseaseName: '缺铁性贫血',
+    name: '请选择血红蛋白值：',
+    seq: '2'
+  },
+  {
+    code: '4261220140201',
+    diseaseCode: '226122014',
+    diseaseName: '肝血管瘤',
+    name: '是否已经通过手术治疗切除？',
+    seq: '3'
+  },
+  {
+    code: '4261220140201',
+    diseaseCode: '226122014',
+    diseaseName: '肝血管瘤',
+    name: '是否已经通过手术治疗切除？',
+    seq: '3'
+  }
+]
+
 export default {
   name: 'Home',
   components: {
@@ -163,11 +298,15 @@ export default {
       ],
       swiperOption: {
         loop: true,
+        height: 300,
         autoplay: {
           delay: 4000,
           stopOnLastSlide: false,
           disableOnInteraction: true
         },
+        effect: 'coverflow',
+        slidesPerView: 3,
+        centeredSlides: true,
         pagination: {
           el: '.swiper-pagination',
           type: 'progressbar',
@@ -179,12 +318,36 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    console.log(this.diff(arr1, arr2))
+  },
+  methods: {
+    diff(arr1, arr2) {
+      var a = arr1.map(function(item) {
+        return item.diseaseCode
+      })
+      var b = arr2.map(function(item) {
+        return item.diseaseCode
+      })
+      var diff = arr1
+        .filter(function(item) {
+          return b.indexOf(item.diseaseCode) === -1
+        })
+        .concat(
+          arr2.filter(function(item) {
+            return a.indexOf(item.diseaseCode) === -1
+          })
+        )
+      return diff
+    }
   }
 }
 </script>
 <style lang="stylus">
 @import '~swiper/dist/css/swiper.css'
-
+body
+  background-color #1d2838
 .cl-effect-3
   a
     position relative
@@ -213,7 +376,7 @@ export default {
       opacity 1
       transform translateY(0px)
 .swiper-slide
-  height 400px
+  // height: 300px;
   img
     width 100%
 .progress-fill
@@ -259,13 +422,47 @@ export default {
   display flex
 /* -- Gallery Part Starts Here -- */
 .gallery
-  background #fff
   padding 2em 0
   text-align center
+  .gallery-list
+    display flex
+    justify-content space-around
+    .tit
+      display flex
+      width 200px
+      height 40px
+      align-items center
+      background-color #2e6588
+      color #7bc2ff
+      font-size 24px
+      border-radius 3px
+      margin-bottom 5px
+      .cell-icon
+        display inline-block
+        width 45px
+        height 40px
+        background-image url('~@/assets/images/011.png')
+        background-repeat no-repeat
+        background-size 100% 100%
+      span
+        display inline-block
+        flex 1
+        text-align center
+    .inside-list
+      display flex
+      justify-content space-between
+      background-color #63646f
+      .img-container
+        width 42px
+        height 73px
+        background-color #fff
+        img
+          width 100%
+          height 100%
 .gallery h3
   font-size 4em
   font-weight 700
-  color #333
+  color #fff
   margin 0em 0 0.5em 0
 /* -- MIXTUP PART -- */
 /* Strip
