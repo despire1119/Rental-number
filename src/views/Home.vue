@@ -2,7 +2,13 @@
   <div class="home">
     <swiper :options="swiperOption">
       <swiper-slide v-for="(item, index) in imgList" :key="index">
-        <img :src="item" :alt="index">
+        <div class="inner-box">
+          <swiper :options="innerSwiper">
+            <swiper-slide v-for="(item, index) in imgList" :key="index">
+              <img :src="item" :alt="index">
+            </swiper-slide>
+          </swiper>
+        </div>
       </swiper-slide>
       <div slot="pagination" class="swiper-pagination" />
       <div slot="button-prev" class="swiper-button-prev swiper-button-white" />
@@ -13,10 +19,13 @@
       <div class="container">
         <ul class="gallery-list">
           <li>
-            <p class="tit">
-              <i class="cell-icon" />
-              <span>端游专区</span>
-            </p>
+            <div class="tit">
+              <p class="cell-icon">
+                <img src="@/assets/images/011.png" alt>
+              </p>
+              <p />
+              <span class="txt">端游专区</span>
+            </div>
             <ul class="inside-list">
               <li class="img-container">
                 <img src="@/assets/images/pubg.png" alt>
@@ -33,10 +42,13 @@
             </ul>
           </li>
           <li>
-            <p class="tit">
-              <i class="cell-icon" />
-              <span>手游专区</span>
-            </p>
+            <div class="tit">
+              <p class="cell-icon">
+                <img src="@/assets/images/012.png" alt>
+              </p>
+              <p />
+              <span class="txt">手游专区</span>
+            </div>
             <ul class="inside-list">
               <li class="img-container">
                 <img src="@/assets/images/pubg.png" alt>
@@ -53,10 +65,13 @@
             </ul>
           </li>
           <li>
-            <p class="tit">
-              <i class="cell-icon" />
-              <span>STM专区</span>
-            </p>
+            <div class="tit">
+              <p class="cell-icon">
+                <img src="@/assets/images/013.png" alt>
+              </p>
+              <p />
+              <span class="txt">STM专区</span>
+            </div>
             <ul class="inside-list">
               <li class="img-container">
                 <img src="@/assets/images/pubg.png" alt>
@@ -74,6 +89,10 @@
           </li>
         </ul>
         <div class="gallery-top">
+          <nav class="nav-top">
+            <span href="javascript:void(0)">综合排序</span>
+            <span class="active" href="javascript:void(0)">全部游戏</span>
+          </nav>
           <div id="portfoliolist">
             <div
               class="portfolio app mix_all"
@@ -299,14 +318,14 @@ export default {
       swiperOption: {
         loop: true,
         height: 300,
-        autoplay: {
-          delay: 4000,
-          stopOnLastSlide: false,
-          disableOnInteraction: true
-        },
-        effect: 'coverflow',
-        slidesPerView: 3,
+        // autoplay: {
+        //   delay: 10000,
+        //   stopOnLastSlide: false,
+        //   disableOnInteraction: true
+        // },
+        slidesPerView: 1,
         centeredSlides: true,
+        // effect: 'cube',
         pagination: {
           el: '.swiper-pagination',
           type: 'progressbar',
@@ -315,6 +334,25 @@ export default {
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
+        }
+      },
+      innerSwiper: {
+        loop: true,
+        height: 300,
+        autoplay: {
+          delay: 4000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true
+        },
+        effect: 'coverflow',
+        slidesPerView: 2,
+        centeredSlides: true,
+        coverflowEffect: {
+          rotate: 1,
+          stretch: 270,
+          depth: 350,
+          modifier: 1,
+          slideShadows: false
         }
       }
     }
@@ -347,7 +385,7 @@ export default {
 <style lang="stylus">
 @import '~swiper/dist/css/swiper.css'
 body
-  background-color #1d2838
+  background-image linear-gradient(to bottom, #2f465d, #1d2838, #1d2838)
 .cl-effect-3
   a
     position relative
@@ -376,9 +414,14 @@ body
       opacity 1
       transform translateY(0px)
 .swiper-slide
-  // height: 300px;
+  height 300px
   img
     width 100%
+    height 100%
+.inner-box
+  width 1200px
+  margin auto
+  padding 0 40px
 .progress-fill
   background #fff
   position absolute
@@ -432,7 +475,7 @@ body
       width 200px
       height 40px
       align-items center
-      background-color #2e6588
+      background-image linear-gradient(to top right, #2b5f81 5%, #316d93 60%, #2b5f81, #316d93)
       color #7bc2ff
       font-size 24px
       border-radius 3px
@@ -441,17 +484,17 @@ body
         display inline-block
         width 45px
         height 40px
-        background-image url('~@/assets/images/011.png')
-        background-repeat no-repeat
-        background-size 100% 100%
-      span
+        img
+          width 100%
+          height 100%
+      .txt
         display inline-block
         flex 1
         text-align center
     .inside-list
       display flex
       justify-content space-between
-      background-color #63646f
+      background-color #60616b
       .img-container
         width 42px
         height 73px
@@ -459,6 +502,26 @@ body
         img
           width 100%
           height 100%
+  .gallery-top
+    padding-top 25px
+    .nav-top
+      display flex
+      justify-content left
+      font-size 24px
+      color #fff
+      background-color #1f2b3c
+      span
+        border-top-right-radius 5px
+        border-top-left-radius 5px
+        background-color transparent
+        display inline-block
+        cursor pointer
+        width 180px
+        height 45px
+        line-height 45px
+        text-align center
+      .active
+        background-color #304a62
 .gallery h3
   font-size 4em
   font-weight 700

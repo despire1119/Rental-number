@@ -9,8 +9,8 @@ const port = process.env.port || process.env.npm_config_port || 8080 // dev port
 
 module.exports = {
   runtimeCompiler: true,
-  publicPath: process.env.NODE_ENV === 'production' ? '/steambuy' : './',
-  // publicPath: '/steambuy',
+  // publicPath: process.env.NODE_ENV === 'production' ? '/steambuy' : './',
+  publicPath: './',
   lintOnSave: true,
   productionSourceMap: false,
   devServer: {
