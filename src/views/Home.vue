@@ -338,6 +338,9 @@ export default {
       },
       innerSwiper: {
         loop: true,
+        // loopAdditionalSlides: 1,
+        slidesPerView: 'auto',
+        loopedSlides: 5,
         height: 300,
         autoplay: {
           delay: 4000,
