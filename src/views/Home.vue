@@ -4,8 +4,8 @@
       <swiper-slide v-for="(item, index) in imgList" :key="index">
         <div class="inner-box">
           <swiper :options="innerSwiper">
-            <swiper-slide v-for="(item, index) in imgList" :key="index">
-              <img :src="item" :alt="index">
+            <swiper-slide v-for="(i, innerIndex) in imgList" :key="innerIndex">
+              <img :src="i" :alt="innerIndex" @click="slideTo(innerIndex)">
             </swiper-slide>
           </swiper>
         </div>
@@ -344,6 +344,7 @@ export default {
           stopOnLastSlide: false,
           disableOnInteraction: true
         },
+        slideToClickedSlide: true,
         effect: 'coverflow',
         slidesPerView: 2,
         centeredSlides: true,
@@ -361,6 +362,9 @@ export default {
     console.log(this.diff(arr1, arr2))
   },
   methods: {
+    slideTo(index) {
+      console.log(index)
+    },
     diff(arr1, arr2) {
       var a = arr1.map(function(item) {
         return item.diseaseCode
