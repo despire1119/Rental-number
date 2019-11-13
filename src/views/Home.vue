@@ -349,7 +349,6 @@ export default {
         },
         slideToClickedSlide: true,
         effect: 'coverflow',
-        slidesPerView: 2,
         centeredSlides: true,
         coverflowEffect: {
           rotate: 1,
