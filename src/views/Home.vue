@@ -318,11 +318,11 @@ export default {
       swiperOption: {
         loop: true,
         height: 300,
-        // autoplay: {
-        //   delay: 10000,
-        //   stopOnLastSlide: false,
-        //   disableOnInteraction: true
-        // },
+        autoplay: {
+          delay: 10000,
+          stopOnLastSlide: false,
+          disableOnInteraction: true
+        },
         slidesPerView: 1,
         centeredSlides: true,
         // effect: 'cube',
@@ -343,7 +343,7 @@ export default {
         loopedSlides: 5,
         height: 300,
         autoplay: {
-          delay: 4000,
+          delay: 3000,
           stopOnLastSlide: false,
           disableOnInteraction: true
         },
