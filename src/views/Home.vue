@@ -328,9 +328,11 @@ export default {
         // effect: 'cube',
         pagination: {
           el: '.swiper-pagination',
-          type: 'progressbar',
-          progressbarFillClass: 'progress-fill'
+          type: 'bullets',
+          progressbarFillClass: 'progress-fill',
+          clickable: true
         },
+        paginationClickable: true,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
@@ -424,6 +426,23 @@ body
   img
     width 100%
     height 100%
+// .swiper-pagination-bullets
+.swiper-container
+  padding-bottom 50px
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets
+  width auto
+  left auto
+  right 20px
+  bottom 0
+.swiper-pagination-bullet
+  width 20px
+  height 5px
+  border-radius 0
+  // border 1px solid #fff
+  background-color #999
+  opacity .8
+.swiper-pagination-bullet-active
+  background-color #fff
 .inner-box
   width 1200px
   margin auto
