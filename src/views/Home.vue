@@ -5,7 +5,7 @@
         <div class="inner-box">
           <swiper :options="innerSwiper">
             <swiper-slide v-for="(i, innerIndex) in imgList" :key="innerIndex">
-              <img :src="i" :alt="innerIndex" @click="slideTo(innerIndex)">
+              <img :src="i" :alt="innerIndex" @click="slideTo(i)">
             </swiper-slide>
           </swiper>
         </div>
