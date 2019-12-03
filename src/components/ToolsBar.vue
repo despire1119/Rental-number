@@ -4,10 +4,10 @@
       <a href="javascript:;" class="help-list">
         <div>
           <i class="default-icon1">
-            <img src="@/assets/images/fixed-default-1.png" alt />
+            <img src="@/assets/images/fixed-default-1.png" alt>
           </i>
           <i class="active-cion1">
-            <img src="@/assets/images/fixed-active-1.png" alt />
+            <img src="@/assets/images/fixed-active-1.png" alt>
           </i>
         </div>
         <p>返回顶部</p>
@@ -15,13 +15,13 @@
       <a href="https://www.igxe.cn/app/" class="help-list" target="_blank">
         <div>
           <i class="default-icon1">
-            <img src="@/assets/images/fixed-default-2.png" alt />
+            <img src="@/assets/images/fixed-default-2.png" alt>
           </i>
           <i class="active-cion1">
-            <img src="@/assets/images/fixed-active-2.png" alt />
+            <img src="@/assets/images/fixed-active-2.png" alt>
           </i>
           <em>
-            <img />
+            <img>
           </em>
         </div>
         <p>APP下载</p>
@@ -29,10 +29,10 @@
       <a href="javascript:" class="help-list" onclick="qimoChatClick();">
         <div>
           <i class="default-icon1">
-            <img src="@/assets/images/fixed-default-4.png" alt />
+            <img src="@/assets/images/fixed-default-4.png" alt>
           </i>
           <i class="active-cion1">
-            <img src="@/assets/images/fixed-active-4.png" alt />
+            <img src="@/assets/images/fixed-active-4.png" alt>
           </i>
         </div>
         <p>在线客服</p>
@@ -40,13 +40,13 @@
       <a href="https://www.igxe.cn/help/guide" class="help-list" target="_blank">
         <div>
           <i class="default-icon1">
-            <img src="@/assets/images/fixed-default-5.png" alt />
+            <img src="@/assets/images/fixed-default-5.png" alt>
           </i>
           <i class="active-cion1">
-            <img src="@/assets/images/fixed-active-5.png" alt />
+            <img src="@/assets/images/fixed-active-5.png" alt>
           </i>
           <em>
-            <img />
+            <img>
           </em>
         </div>
         <p>新手指南</p>
@@ -54,10 +54,10 @@
       <a href="javascript:;" class="help-list verify-btn">
         <div>
           <i class="default-icon1">
-            <img src="@/assets/images/fixed-default-6.png" alt />
+            <img src="@/assets/images/fixed-default-6.png" alt>
           </i>
           <i class="active-cion1">
-            <img src="@/assets/images/fixed-active-6.png" alt />
+            <img src="@/assets/images/fixed-active-6.png" alt>
           </i>
         </div>
         <p>验证中心</p>
@@ -68,9 +68,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 <style lang="stylus" scoped>
 a
