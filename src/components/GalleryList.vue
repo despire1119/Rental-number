@@ -13,7 +13,13 @@
     </div>
     <div class="gellary-content">
       <aside class="aside-bar">
-        <p>STM游戏</p>
+        <div class="cell">
+          <div class="target"><img src="" alt=""></div>
+          <div class="des">
+            <p>STM专区</p>
+            <p>Steam Games</p>
+          </div>
+        </div>
         <p>端游专区</p>
         <p>手游专区</p>
       </aside>
