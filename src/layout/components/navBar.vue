@@ -12,7 +12,7 @@
         </ul>
       </div>
       <div class="search-bar">
-        <input type="text" placeholder="search">
+        <input ref="toFocus" type="text" placeholder="search">
         <input type="submit" value>
       </div>
     </div>
@@ -36,6 +36,7 @@ export default {
   },
   mounted() {
     this.getCurrent()
+    this.$refs.toFocus.focus()
   },
   methods: {
     getCurrent(name) {

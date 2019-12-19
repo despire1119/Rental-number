@@ -17,7 +17,7 @@
 
     <div class="gallery">
       <div class="container">
-        <ul class="gallery-list">
+        <!-- <ul class="gallery-list">
           <li>
             <div class="tit">
               <p class="cell-icon">
@@ -87,7 +87,8 @@
               </li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
+        <gallery-list />
         <div class="gallery-top">
           <nav class="nav-top">
             <span href="javascript:void(0)">综合排序</span>
@@ -226,6 +227,7 @@
 
 <script>
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import GalleryList from '@/components/GalleryList'
 
 const arr1 = [
   {
@@ -304,7 +306,8 @@ export default {
   name: 'Home',
   components: {
     swiper,
-    swiperSlide
+    swiperSlide,
+    GalleryList
   },
   data() {
     return {
@@ -364,6 +367,20 @@ export default {
   },
   mounted() {
     console.log(this.diff(arr1, arr2))
+    class Person {
+      // 定义了一个名字为Person的类
+      constructor(name, age) {
+        // constructor是一个构造方法，用来接收参数
+        this.name = name // this代表的是实例对象
+        this.age = age
+      }
+      say() {
+        // 这是一个类的方法，注意千万不要加上function
+        return `我的名字叫${this.name}今年${this.age}岁了`
+      }
+    }
+    const p = new Person('老王', 18)
+    console.log(p.say())
   },
   methods: {
     slideTo(index) {
@@ -390,7 +407,7 @@ export default {
   }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '~swiper/dist/css/swiper.css'
 body
   background-image linear-gradient(to bottom, #2f465d, #1d2838, #1d2838)
@@ -440,7 +457,7 @@ body
   border-radius 0
   // border 1px solid #fff
   background-color #999
-  opacity .8
+  opacity 0.8
 .swiper-pagination-bullet-active
   background-color #fff
 .inner-box
