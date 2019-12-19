@@ -13,27 +13,27 @@
     </div>
     <div class="gellary-content">
       <aside class="aside-bar">
-        <div class="cell">
+        <a class="cell">
           <div class="target"><img :src="require('@/assets/images/subnav-icon-03.png')" alt=""></div>
           <div class="des">
             <h5>STM专区</h5>
             <p>Steam Games</p>
           </div>
-        </div>
-        <div class="cell">
+        </a>
+        <a class="cell">
           <div class="target"><img :src="require('@/assets/images/subnav-icon-01.png')" alt=""></div>
           <div class="des">
             <h5>端游专区</h5>
             <p>Computer Games</p>
           </div>
-        </div>
-        <div class="cell">
+        </a>
+        <a class="cell">
           <div class="target"><img :src="require('@/assets/images/subnav-icon-02.png')" alt=""></div>
           <div class="des">
             <h5>手游专区</h5>
             <p>Cellphone Games</p>
           </div>
-        </div>
+        </a>
       </aside>
       <div class="notice-list">
         <p>公告</p>
